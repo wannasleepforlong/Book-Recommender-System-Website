@@ -1,11 +1,10 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import pandas as pd
 books = pd.read_csv('book-recommendation-dataset/Books.csv', low_memory=False)
 
 # Load the DataFrame from the pickle file
-pt = pd.read_pickle("pt.pickle")
+pt = pd.read_pickle("pt.pkl")
 
 from sklearn.metrics.pairwise import cosine_similarity
 similarity_scores = cosine_similarity(pt)
